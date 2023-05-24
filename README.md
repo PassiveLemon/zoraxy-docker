@@ -10,9 +10,26 @@ Docker container for [Zoraxy](https://github.com/tobychui/zoraxy) </br>
 ## Setup </br>
 There really isn't much here, just make sure you find a good place to store the files. The container will download everything automatically so this place is used to store the files so they aren't deleted when the container is deleted. </br>
 
-### Docker container </br>
+### Using Docker run</br>
 ```
 docker run -d --name (container name) -p (ports) -v (path to storage directory):/zoraxy/data/ -e ARGS=(your arguments) -e VERSION=(version) passivelemon/zoraxy-docker:latest
+```
+
+### Using Docker Compose</br>
+```
+version: '3.3'
+services:
+    zoraxy-docker:
+        container_name: (container name)
+        ports:
+            - '80:80' #http port
+            - '443:443' #https port
+            - '(wanted port):8000' #Management portal port
+        volumes:
+            - '(path to storage directory):/zoraxy/data/'
+        environment:
+            - 'ARGS=-port=:8000' #telling Zoraxy what port to listen on for the management portal
+        image: 'passivelemon/zoraxy-docker:latest'
 ```
 
 | Operator | Need | Details |
@@ -25,6 +42,25 @@ docker run -d --name (container name) -p (ports) -v (path to storage directory):
 | `passivelemon/zoraxy-docker:latest` | Yes | The repository on Docker hub. By default, it is the latest version that I have published. |
 
 #### Example:
+### Docker Run
 ```
 docker run -d --name zoraxy -p 8000:8000/tcp -v /home/docker/Containers/Zoraxy:/zoraxy/data/ -e ARGS="-port=:8000 -noauth=false" passivelemon/zoraxy-docker:latest
+```
+
+### Docker Compose
+### Using Docker Compose</br>
+```
+version: '3.3'
+services:
+    zoraxy-docker:
+        container_name: zoraxy
+        ports:
+            - '80:80' #http port
+            - '443:443' #https port
+            - '8000:8000' #Management portal port
+        volumes:
+            - '/home/docker/Containers/Zoraxy:/zoraxy/data/'
+        environment:
+            - 'ARGS=-port=:8000' #telling Zoraxy what port to listen on for the management portal
+        image: 'passivelemon/zoraxy-docker:latest'
 ```
