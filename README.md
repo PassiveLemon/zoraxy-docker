@@ -5,6 +5,9 @@
 [![Size](https://img.shields.io/docker/image-size/passivelemon/zoraxy-docker/latest?sort=semver&labelColor-555555&color-007EC6&style=flat-square)](https://hub.docker.com/r/passivelemon/zoraxy-docker)
 [![Pulls](https://img.shields.io/docker/pulls/passivelemon/zoraxy-docker?labelColor-555555&color-007EC6&style=flat-square)](https://hub.docker.com/r/passivelemon/zoraxy-docker)
 
+# Update:
+<b>This will be continued in the official Zoraxy repository. Go there for the latest updates. This repository is here for archival purposes and may become outdated. </b>
+
 Docker container for [Zoraxy](https://github.com/tobychui/zoraxy) </br>
 
 ## Setup: </br>
