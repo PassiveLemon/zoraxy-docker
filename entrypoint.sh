@@ -34,7 +34,7 @@ fi
 if [ ! -f "/zoraxy/server/zoraxy_bin_${VERSION}" ]; then
   echo "|| Cloning repository... ||"
   cd /zoraxy/source/
-  git clone --depth=1 --branch main https://github.com/tobychui/zoraxy
+  git clone --depth 1 --single-branch --branch main https://github.com/tobychui/zoraxy
   cd /zoraxy/source/zoraxy/src/
   echo "|| Building... ||"
   go mod tidy
