@@ -1,6 +1,7 @@
-FROM --platform=$BUILDPLATFORM docker.io/alpine:3.18.2
+FROM alpine:latest
 
-RUN apk add --no-cache bash curl jq git go sudo
+RUN apk update && apk upgrade &&\
+    apk add bash curl jq git go sudo
 
 RUN mkdir -p /zoraxy/source/ &&\
     mkdir -p /zoraxy/config/
