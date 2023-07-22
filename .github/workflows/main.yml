@@ -2,7 +2,7 @@ name: build our image
 
 on:
   push:
-    branches: master
+    branches: 2.1.0-Test
 
 jobs:
   build:
@@ -20,5 +20,5 @@ jobs:
       - name: build the image
         run: |
           docker buildx build --push \
-            --tag passivelemon/zoraxy-docker:latest \
+            --tag passivelemon/zoraxy-docker:2.1.0-Test \
             --platform linux/amd64,linux/arm/v7,linux/arm64 .
