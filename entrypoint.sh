@@ -9,7 +9,6 @@ if [ "$(curl -s "https://api.github.com/repos/tobychui/zoraxy/git/refs/tags" | j
   echo "|| Currently rate limited by GitHub. Please wait until it clears. ||"
   exit
 fi
-if [ "$(curl -s https://google.com/)" ]
 
 # Container update notifier
 . /zoraxy/notifier.sh
