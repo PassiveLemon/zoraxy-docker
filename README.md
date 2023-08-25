@@ -1,3 +1,7 @@
+# The Docker container is no longer being updated in here. Check out the official GitHub Zoraxy repository [here](https://github.com/tobychui/zoraxy/) and the official Docker repository [here](https://hub.docker.com/r/zoraxydocker/zoraxy).
+
+<strike>
+
 # [zoraxy-docker](https://github.com/tobychui/zoraxy/) </br>
 
 [![Repo](https://img.shields.io/badge/Docker-Repo-007EC6?labelColor-555555&color-007EC6&logo=docker&logoColor=fff&style=flat-square)](https://hub.docker.com/r/passivelemon/zoraxy-docker)
@@ -66,3 +70,4 @@ services:
       ARGS: '-port=:8000 -noauth=false'
       VERSION: '2.6.5'
 ```
+</strike>
